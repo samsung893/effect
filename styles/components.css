@@ -1,0 +1,96 @@
+/* Scroll container */
+.scrollContainer {
+  box-sizing: border-box;
+  overflow-y: scroll;
+  height: 100%;
+  padding-right: var(--ui-kit-space-2);
+  padding-bottom: var(--ui-kit-space-2);
+  /* padding-bottom: var(--ui-kit-space-2); */
+  /* for firefox */
+  scrollbar-width: thin;
+  scrollbar-color: var(--ui-kit-color-typography-quaternary) transparent;
+}
+.relativeContainer{
+
+  position: relative;
+ 
+}
+.scrollContainer::-webkit-scrollbar {
+  position: absolute;
+  width: var(--ui-kit-base-unit);
+  height: 0;
+}
+
+.scrollContainer::-webkit-scrollbar-track {
+  background: transparent;
+  width: var(--ui-kit-base-unit);
+  margin-top: var(--ui-kit-space-1);
+  margin-bottom: var(--ui-kit-space-1);
+}
+
+.scrollContainer::-webkit-scrollbar-thumb {
+  border-radius: var(--ui-kit-border-radius);
+  background: var(--ui-kit-color-typography-quaternary);
+  visibility: hidden;
+}
+
+.scrollContainer:hover::-webkit-scrollbar-thumb,
+.scrollContainer:focus::-webkit-scrollbar-thumb,
+.scrollContainer:focus-within::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+.img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+/* .compareContainer{
+  display: flex;
+  width:100%;
+  justify-content: center;
+} */
+.boxGap2u{
+  gap:var(--ui-kit-space-2)
+}
+.boxGap1u{
+  gap:var(--ui-kit-space-1)
+}
+.px1u {
+  padding-left: var(--ui-kit-space-1);
+  padding-right: var(--ui-kit-space-1);
+}
+.effectTitle{
+  display:block;
+  width:100%
+}
+.p1u{
+  padding: var(--ui-kit-space-1);
+}
+.cursorPointer{
+  cursor: pointer;
+}
+.p05u{
+  padding: calc(var(--ui-kit-space-1) / 2);
+}
+.effectWithoutSeleted{
+  padding: calc(var(--ui-kit-space-1) / 2);
+  min-height:86px
+}
+.selectedEffect{
+  padding: calc(var(--ui-kit-space-1) / 2);
+  border:2px solid var(--ui-kit-color-primary);
+  /* border-width:var(--ui-kit-border-width); */
+  border-radius: var(--ui-kit-space-1);
+}
+.imageCardWrapper img {
+  object-fit: contain !important; /* Giữ nguyên tỷ lệ và không cắt ảnh */
+  width: 100% !important; /* Ép ảnh full chiều rộng */
+  height: 100% !important; /* Ép ảnh full chiều cao */
+}
+.stickyHeader{
+  padding-top: var(--ui-kit-space-2);
+  padding-bottom: var(--ui-kit-space-2);
+
+  position:sticky;
+  top:0;
+z-index:1  
+}

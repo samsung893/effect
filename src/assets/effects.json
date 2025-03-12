@@ -1,0 +1,375 @@
+{
+    "Lines and Colors": [
+      {
+        "label": "Lines Effects",
+        "value": "horizontal_lines"
+      },
+      {
+        "label": "Strong Blue",
+        "value": "extreme_offset_blue"
+      },
+      {
+        "label": "Ocean Tones",
+        "value": "ocean"
+      },
+      {
+        "label": "Strong Green",
+        "value": "extreme_offset_green"
+      },
+      {
+        "label": "Green Offset",
+        "value": "offset_green"
+      },
+      {
+        "label": "Extra Blue",
+        "value": "extra_offset_blue"
+      },
+      {
+        "label": "Extra Red",
+        "value": "extra_offset_red"
+      },
+      {
+        "label": "Extra Green",
+        "value": "extra_offset_green"
+      },
+      {
+        "label": "Strong Red",
+        "value": "extreme_offset_red"
+      }
+    ],
+    "Texture and Vintage Effects": [
+      {
+        "label": "Red Specks",
+        "value": "specks_redscale"
+      },
+      {
+        "label": "Vintage Look",
+        "value": "vintage"
+      },
+      {
+        "label": "Perfumed",
+        "value": "perfume"
+      },
+      {
+        "label": "Serene Tone",
+        "value": "serenity"
+      },
+      {
+        "label": "Eclectic",
+        "value": "eclectic"
+      },
+      {
+        "label": "Diagonal",
+        "value": "diagonal_lines"
+      },
+      {
+        "label": "Green Speckled",
+        "value": "green_specks"
+      },
+      {
+        "label": "Warm Vibes",
+        "value": "warmth"
+      },
+      {
+        "label": "Casino Inspired",
+        "value": "casino"
+      }
+    ],
+    "Geometric and Offset Effects": [
+      {
+        "label": "Green Diagonal",
+        "value": "green_diagonal_lines"
+      },
+      {
+        "label": "Basic Offset",
+        "value": "offset"
+      },
+      {
+        "label": "Blue Offset",
+        "value": "offset_blue"
+      },
+      {
+        "label": "Neue Style",
+        "value": "neue"
+      },
+      {
+        "label": "Sunset Effect",
+        "value": "sunset"
+      },
+      {
+        "label": "Speckled Effect",
+        "value": "specks"
+      },
+      {
+        "label": "Wooden Texture",
+        "value": "wood"
+      },
+      {
+        "label": "Lix Style",
+        "value": "lix"
+      },
+      {
+        "label": "Ryo Aesthetic",
+        "value": "ryo"
+      }
+    ],
+    "Blues and Speckled Effects": [
+      {
+        "label": "Blue Tones",
+        "value": "bluescale"
+      },
+      {
+        "label": "Solange Inspired",
+        "value": "solange"
+      },
+      {
+        "label": "Evening Glow",
+        "value": "evening"
+      },
+      {
+        "label": "Crimson Shade",
+        "value": "crimson"
+      },
+      {
+        "label": "Teal Noise",
+        "value": "teal_min_noise"
+      },
+      {
+        "label": "Phase Effect",
+        "value": "phase"
+      },
+      {
+        "label": "Purple Noise",
+        "value": "dark_purple_min_noise"
+      },
+      {
+        "label": "Coral Tone",
+        "value": "coral"
+      },
+      {
+        "label": "Darkened Look",
+        "value": "darkify"
+      }
+    ],
+    "Brightness and Color Adjustments": [
+      {
+        "label": "Increase Brightness",
+        "value": "incbrightness"
+      },
+      {
+        "label": "Brightness Boost",
+        "value": "incbrightness2"
+      },
+      {
+        "label": "Yellow Casino",
+        "value": "yellow_casino"
+      },
+      {
+        "label": "Inverted Colors",
+        "value": "invert"
+      },
+      {
+        "label": "Saturation",
+        "value": "sat_adj"
+      },
+      {
+        "label": "Lemon Shade",
+        "value": "lemon"
+      },
+      {
+        "label": "Pink Noise",
+        "value": "pink_min_noise"
+      },
+      {
+        "label": "Frontward Motion",
+        "value": "frontward"
+      },
+      {
+        "label": "Pink Aura",
+        "value": "pink_aura"
+      }
+    ],
+    "Mood and Solange": [
+      {
+        "label": "Hazy Effect",
+        "value": "haze"
+      },
+      {
+        "label": "Twilight Coolness",
+        "value": "cool_twilight"
+      },
+      {
+        "label": "Blues Tone",
+        "value": "blues"
+      },
+      {
+        "label": "Horizon Line",
+        "value": "horizon"
+      },
+      {
+        "label": "Mellow Vibes",
+        "value": "mellow"
+      },
+      {
+        "label": "Solange Dark",
+        "value": "solange_dark"
+      },
+      {
+        "label": "Solange Grey",
+        "value": "solange_grey"
+      },
+      {
+        "label": "Zapt Effect",
+        "value": "zapt"
+      },
+      {
+        "label": "Eon Aesthetic",
+        "value": "eon"
+      }
+    ],
+    "Matrix and Noise Effects": [
+      {
+        "label": "Aeon Effect",
+        "value": "aeon"
+      },
+      {
+        "label": "Matrix Look",
+        "value": "matrix"
+      },
+      {
+        "label": "Cosmic Vibes",
+        "value": "cosmic"
+      },
+      {
+        "label": "Minimal Noise",
+        "value": "min_noise"
+      },
+      {
+        "label": "Red Noise",
+        "value": "red_min_noise"
+      },
+      {
+        "label": "Matrix Style",
+        "value": "matrix2"
+      },
+      {
+        "label": "Purplescale Effect",
+        "value": "purplescale"
+      },
+      {
+        "label": "Radio Aesthetic",
+        "value": "radio"
+      },
+      {
+        "label": "Twenties Style",
+        "value": "twenties"
+      }
+    ],
+    "Pixel and Grayscale Effects": [
+      {
+        "label": "Pixelated Blue",
+        "value": "pixel_blue"
+      },
+      {
+        "label": "Grayscale Effect",
+        "value": "greyscale"
+      },
+      {
+        "label": "Grime Look",
+        "value": "grime"
+      },
+      {
+        "label": "Red Greyscale",
+        "value": "redgreyscale"
+      },
+      {
+        "label": "Green Greyscale",
+        "value": "greengreyscale"
+      },
+      {
+        "label": "Green Medium",
+        "value": "green_med_noise"
+      },
+      {
+        "label": "Green Min Noise",
+        "value": "green_min_noise"
+      },
+      {
+        "label": "Blue Min Noise",
+        "value": "blue_min_noise"
+      },
+      {
+        "label": "Rosetint Effect",
+        "value": "rosetint"
+      }
+    ],
+    "Purple and Red Effects": [
+      {
+        "label": "Purple Noise",
+        "value": "purple_min_noise"
+      },
+      {
+        "label": "Red Tone Effect",
+        "value": "red_effect"
+      },
+      {
+        "label": "Gamma Effect",
+        "value": "gamma"
+      },
+      {
+        "label": "Teal Gamma",
+        "value": "teal_gamma"
+      },
+      {
+        "label": "Purple Gamma",
+        "value": "purple_gamma"
+      },
+      {
+        "label": "Blue-Red Gamma",
+        "value": "bluered_gamma"
+      },
+      {
+        "label": "Green Gamma",
+        "value": "green_gamma"
+      },
+      {
+        "label": "Red Gamma",
+        "value": "red_gamma"
+      }
+    ],
+    "Speckles and RGB Effects": [
+      {
+        "label": "Black Speckles",
+        "value": "black_specks"
+      },
+      {
+        "label": "White Speckles",
+        "value": "white_specks"
+      },
+      {
+        "label": "Salt and Pepper",
+        "value": "salt_and_pepper"
+      },
+      {
+        "label": "RGB Split",
+        "value": "rgbSplit"
+      },
+      {
+        "label": "Threshold Effect",
+        "value": "threshold"
+      },
+      {
+        "label": "Threshold 75%",
+        "value": "threshold75"
+      },
+      {
+        "label": "Threshold 125%",
+        "value": "threshold125"
+      },
+      {
+        "label": "Pixelation",
+        "value": "pixelate16"
+      }
+    ]
+  }
+  
