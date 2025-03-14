@@ -1,4 +1,4 @@
-import { Box, FormField, ImageCard, NumberInput, Rows, Text } from "@canva/app-ui-kit";
+import { Box, FormField, ImageCard, NumberInput, Rows, Slider, Text } from "@canva/app-ui-kit";
 import React, { useContext, useEffect, useState } from "react";
 import { IEffectData } from "../ListEffect";
 import * as styles from "styles/components.css";
@@ -44,21 +44,15 @@ export const AdjustStrength: React.FC = () => {
                 description: "Adjust the effect strength",
             })}
             control={(props) => (
-                <Rows spacing="2u">
-                    <NumberInput
-                        decrementAriaLabel="Decrease number"
+                <Box paddingStart="2u">
+                    <Slider
                         max={2}
                         defaultValue={1}
                         min={0.1}
-                        // value={strength}
-                        hasSpinButtons
-                        incrementAriaLabel="Increase number"
                         step={0.1}
-                        // on
-                        // onChange={onChange}
                         onChangeComplete={handleChangeStrength}
                     />
-                </Rows>
+                </Box>
             )}
         />
     );

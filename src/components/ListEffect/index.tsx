@@ -1,4 +1,4 @@
-import { Box, Button, Carousel, FormField, NumberInput, Rows, Scrollable, Title, TrashIcon } from "@canva/app-ui-kit";
+import { Box, Button, Carousel, FileInputItem, FormField, NumberInput, Rows, Scrollable, Title, TrashIcon } from "@canva/app-ui-kit";
 import { CardEffect } from "../CardEffect";
 import { useCallback, useContext, useEffect, useMemo } from "react";
 import AppContext from "src/context/AppProvider";
@@ -132,7 +132,16 @@ export const ListEffect = () => {
         <Rows spacing="2u">
             {previewImage && (
                 <>
-                    <Button
+                    <FileInputItem
+                        label={selectedImage?.name || formatMessage({
+                            id: "selected_file",
+                            defaultMessage: "Selected image",
+                            description: "Selected file item",
+                        })}
+                        onDeleteClick={handleRemoveImage}
+                        disabled={isUploading}
+                    />
+                    {/* <Button
                         variant="secondary"
                         onClick={handleRemoveImage}
                         stretch
@@ -144,7 +153,7 @@ export const ListEffect = () => {
                             defaultMessage: "Remove image",
                             description: "Remove image",
                         })}
-                    </Button>
+                    </Button> */}
                     {/* <FormField
                         label={formatMessage({
                             id: "effect_strength",

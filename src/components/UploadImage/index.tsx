@@ -19,7 +19,7 @@ import { useSelection } from "utils/use_selection_hook";
 import * as styles from "styles/components.css";
 
 export const UploadImage: React.FC = () => {
-  const imageRef = useRef<any>();
+  const imageRef = useRef<any>(null);
   const [imageDimensions, setImageDimensions] = useState<Area>({
     width: 1,
     height: 1
@@ -41,6 +41,7 @@ export const UploadImage: React.FC = () => {
     isUploading,
     setIsUploading,
     setSelectedEffect,
+    setSelectedImage,
     setStrength
   } = useContext(AppContext);
 
@@ -145,42 +146,6 @@ export const UploadImage: React.FC = () => {
       reader.readAsDataURL(blob);
     });
   };
-  const onClickAddToDesign = async () => {
-    setIsAddToDesign(true)
-    if (!originImage) return;
-
-    let imageDataUrl = originImage;
-    try {
-      if (originImage.startsWith("blob:")) {
-        const imageData = await currentSelection.read();
-        if (!imageData.contents?.length) return;
-
-        const selectedImageRef = imageData.contents[0].ref;
-        const imageUrl = await getUrlImageSelected(selectedImageRef);
-
-        imageDataUrl = await convertImageUrlToBase64(imageUrl.url);
-
-        addElement({
-          type: "image",
-          dataUrl: imageDataUrl,
-          altText: undefined,
-        });
-        return
-      }
-      if (selectedEffect) {
-        imageDataUrl = await applyEffect(originImage, selectedEffect, strength || 1);
-      }
-
-      await addElement({
-        type: "image",
-        dataUrl: imageDataUrl,
-        altText: undefined,
-      });
-    } finally {
-      setIsAddToDesign(false)
-    }
-    // onClickSaveImage();
-  };
   const handleFileUpload = useCallback(async (files: File[]) => {
     if (!files?.length) return;
     const [file] = files;
@@ -198,7 +163,7 @@ export const UploadImage: React.FC = () => {
     }
     const reader = new FileReader();
     setIsUploading?.(true);
-
+    setSelectedImage?.(file)
     reader.onloadend = async () => {
       const base64 = reader.result as string;
       setOriginImage?.(base64);
@@ -235,9 +200,10 @@ export const UploadImage: React.FC = () => {
     setResizeImage?.(undefined)
     setOriginImage?.(undefined)
     setUploadMethod?.(undefined)
+    setSelectedImage?.(undefined)
     setSelectedEffect?.('')
     setStrength?.(1)
-  }, [setPreviewImage, setUploadMethod]);
+  }, [setPreviewImage, setUploadMethod, setSelectedImage]);
 
   useEffect(() => {
     if (isUploading || !previewImage) return;
@@ -274,7 +240,10 @@ export const UploadImage: React.FC = () => {
     <div className={`${styles.stickyHeader} theme`}>
       <Rows spacing="3u">
         {previewImage || isUploading ? (
-          <div ref={imageRef} className="theme">
+          <div
+            ref={imageRef}
+            className={`theme`}
+          >
             {previewImage && <ImageCard
               alt="Preview image"
               // borderRadius="standard"
@@ -311,7 +280,7 @@ export const UploadImage: React.FC = () => {
           </Rows>
         )}
 
-        {(previewImage || isUploading) && (
+        {/* {(previewImage || isUploading) && (
           <Button
             variant="primary"
             onClick={onClickAddToDesign}
@@ -325,7 +294,7 @@ export const UploadImage: React.FC = () => {
               description: "Add to design",
             })}
           </Button>
-        )}
+        )} */}
       </Rows>
     </div>
   );
