@@ -123,6 +123,42 @@ export const UploadImage: React.FC = () => {
 
     }
   };
+  const onClickAddToDesign = async () => {
+    setIsAddToDesign(true)
+    if (!originImage) return;
+
+    let imageDataUrl = originImage;
+    try {
+      if (originImage.startsWith("blob:")) {
+        const imageData = await currentSelection.read();
+        if (!imageData.contents?.length) return;
+
+        const selectedImageRef = imageData.contents[0].ref;
+        const imageUrl = await getUrlImageSelected(selectedImageRef);
+
+        imageDataUrl = await convertImageUrlToBase64(imageUrl.url);
+
+        addElement({
+          type: "image",
+          dataUrl: imageDataUrl,
+          altText: undefined,
+        });
+        return
+      }
+      if (selectedEffect) {
+        imageDataUrl = await applyEffect(originImage, selectedEffect, strength || 1);
+      }
+
+      await addElement({
+        type: "image",
+        dataUrl: imageDataUrl,
+        altText: undefined,
+      });
+    } finally {
+      setIsAddToDesign(false)
+    }
+    // onClickSaveImage();
+  };
   const fetchImage = async (url: string) => {
     const response = await fetch(url);
     return response.blob();
@@ -280,7 +316,7 @@ export const UploadImage: React.FC = () => {
           </Rows>
         )}
 
-        {/* {(previewImage || isUploading) && (
+        {(previewImage || isUploading) && (
           <Button
             variant="primary"
             onClick={onClickAddToDesign}
@@ -294,7 +330,7 @@ export const UploadImage: React.FC = () => {
               description: "Add to design",
             })}
           </Button>
-        )} */}
+        )}
       </Rows>
     </div>
   );
